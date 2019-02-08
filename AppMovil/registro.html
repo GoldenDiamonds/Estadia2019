@@ -11,7 +11,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/index.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/Usuarios.js"></script>
+<script src="js/Personal.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -71,8 +71,8 @@
 	      <!--<form action="../controller/registroUsuario.php" method="post">-->
 	        <h3>Registro de usuario</h3>
 	        <div data-role="fieldcontain">
-	          <label for="usuario"><strong>Nombre de usuario</strong></label>
-	          <input type="text" name="usuario" id="usuario" required/>
+	          <label for="ficha"><strong>Ficha</strong></label>
+	          <input type="text" name="ficha" id="ficha" required/>
 	        </div>
 	        <div data-role="fieldcontain">
 	          <label for="password"><strong>Contraseña</strong></label>
@@ -85,10 +85,6 @@
 	        <div data-role="fieldcontain">
 	          <label for="apellidos"><strong>Apellidos</strong></label>
 	          <input type="text" name="apellidos" id="apellidos" required/>
-	        </div>
-	        <div data-role="fieldcontain">
-	          <label for="correo"><strong>Correo</strong></label>
-	          <input type="text" name="correo" id="correo" required/>
 	        </div>
 	        <!--
 	        <div data-role="fieldcontain">
@@ -119,7 +115,6 @@
 			            <th data-priority="persist">Password</th>
 			            <th data-priority="2">Nombre</th>
 			            <th data-priority="3">Apellidos</th>
-						<th data-priority="4">Correo</th>
 			        </tr>
 			        </thead>
 			        <tbody>

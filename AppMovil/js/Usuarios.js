@@ -1,11 +1,11 @@
 //Test for browser compatibility
 if (window.openDatabase) {
     //Create the database the parameters are 1. the database name 2.version number 3. a description 4. the size of the database (in bytes) 1024 x 1024 = 1MB
-    var mydb = openDatabase("tatiaxca", "1.0", "Base de Datos Cafe Tatiaxca", 3*1024*1024);
+    var mydb = openDatabase("dctipn", "1.0", "Base de Datos DCTIPN", 3*1024*1024);
 
     //create the cars table using SQL for the database using a transaction
     mydb.transaction(function (t) {
-        t.executeSql("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY ASC, usuario TEXT, password TEXT, nombre TEXT, apellidos TEXT, correo TEXT)");
+        t.executeSql("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY ASC, ficha TEXT, password TEXT, nombre TEXT, apellidos TEXT, correo TEXT)");
     });
 
 
@@ -47,7 +47,7 @@ function salidaUsuarios() {
             t.executeSql("SELECT * FROM usuarios", [], actualizarUsuario);
         });
     } else {
-        alert("¡Tu navegador web/browser no soporta WebSQL!");
+       // alert("¡Tú navegador web/browser no soporta WebSQL!");
     }
 }
 
@@ -57,24 +57,24 @@ function addUsuario() {
     //check to ensure the mydb object has been created
     if (mydb) {
         //get the values of the make and model text inputs
-        var usuario = document.getElementById("usuario").value;
+        var ficha = document.getElementById("ficha").value;
         var password = document.getElementById("password").value;
         var nombre = document.getElementById("nombre").value;
         var apellidos = document.getElementById("apellidos").value;
-        var correo = document.getElementById("correo").value;
+        //var correo = document.getElementById("correo").value;
 
         //Test to ensure that the user has entered both a make and model
-        if (usuario !== "" || password !== "" ||nombre !== "" || apellidos !== "" || correo != "") {
+        if (ficha !== "" || password !== "" ||nombre !== "" || apellidos !== "") {
             //Insert the user entered details into the cars table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function (t) {
-                t.executeSql("INSERT INTO usuarios (usuario, password, nombre, apellidos, correo) VALUES (?, ?, ?, ?, ?)", [usuario, password, nombre, apellidos, correo]);
+                t.executeSql("INSERT INTO usuarios (ficha, password, nombre, apellidos) VALUES (?, ?, ?, ?)", [ficha, password, nombre, apellidos]);
                 salidaUsuarios();
             });
         } else {
             alert("Por favor, ingresa un usuario con todos los campos");
         }
     } else {
-        alert("¡Tu navegador web/browser no soporta WebSQL!");
+        alert("¡Tú navegador web/browser no soporta WebSQL!");
     }
 }
 
@@ -89,7 +89,7 @@ function eliminarUsuario(id) {
             t.executeSql("DELETE FROM usuarios WHERE id=?", [id], salidaUsuarios);
         });
     } else {
-        alert("¡Tu navegador web/browser no soporta WebSQL!");
+        alert("¡Tú navegador web/browser no soporta WebSQL!");
     }
 }
 
