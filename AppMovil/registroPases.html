@@ -9,7 +9,7 @@
 <script src="js/jquery.js"></script>
 <!--<script src="js/index.js"></script>-->
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/Vehiculo.js"></script>
+<script src="js/Pases.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -67,26 +67,42 @@
 		<!--Inicio de Content-->
 		<div data-role="content">
 	      <!--<form action="../controller/registroUsuario.php" method="post">-->
-	        <h3>Registro de Vehículo</h3>
+	        <h3>Registro de Pases</h3>
 	        <div data-role="fieldcontain">
-	          <label for="numEco"><strong>Número Económico</strong></label>
-	          <input type="text" name="numEco" id="numEco" required/>
+	          <label for="fecha"><strong>Fecha</strong></label>
+	          <input type="text" name="fecha" id="fecha" required/>
 	        </div>
 	        <div data-role="fieldcontain">
-	          <label for="placas"><strong>Placas</strong></label>
-	          <input type="text" name="placas" id="placas" required/>
+	          <label for="ficha"><strong>Ficha</strong></label>
+	          <input type="text" name="ficha" id="ficha" required/>
 	        </div>
 	        <div data-role="fieldcontain">
-	          <label for="marca"><strong>Marca</strong></label>
-	          <input type="text" name="marca" id="marca" required/>
+	          <label for="actividad"><strong>Actividad</strong></label>
+	          <input type="text" name="actividad" id="actividad" required/>
 	        </div>
 	        <div data-role="fieldcontain">
-	          <label for="modelo"><strong>Modelo</strong></label>
-	          <input type="text" name="modelo" id="modelo" required/>
+	          <label for="vehiculo"><strong>Vehiculo</strong></label>
+	          <input type="text" name="vehiculo" id="vehiculo" required/>
 	        </div>
 	        <div data-role="fieldcontain">
-	          <label for="numSerie"><strong>Número de Serie</strong></label>
-	          <input type="text" name="numSerie" id="numSerie" required/>
+	          <label for="destinos"><strong>Destinos</strong></label>
+	          <input type="text" name="destinos" id="destinos" required/>
+	        </div>
+	        <div data-role="fieldcontain">
+	          <label for="material"><strong>Material</strong></label>
+	          <input type="text" name="material" id="material" required/>
+	        </div>
+	        <div data-role="fieldcontain">
+	          <label for="combustible"><strong>Combustible</strong></label>
+	          <input type="text" name="combustible" id="combustible" required/>
+	        </div>
+	        <div data-role="fieldcontain">
+	          <label for="kilometraje"><strong>Kilometraje</strong></label>
+	          <input type="text" name="kilometraje" id="kilometraje" required/>
+	        </div>
+	        <div data-role="fieldcontain">
+	          <label for="horaSalida"><strong>Hora de Salida</strong></label>
+	          <input type="text" name="horaSalida" id="horaSalida" required/>
 	        </div>
 	        <!--
 	        <div data-role="fieldcontain">
@@ -94,14 +110,14 @@
 	        </div>
 			-->
 			
-	        <button type="button" id="addCoche" onclick="addCoche();">Añadir</button>
+	        <button type="button" id="addPase" onclick="addPase();">Añadir</button>
 	        
-			  <div id="listaVehiculoHolder">
-			       <h3>Lista de vehiculos</h3>
+			  <div id="listaPasesHolder">
+			       <h3>Lista de Pases</h3>
 			       <h6>
-			       &emsp;&emsp;NumEcon&emsp;&emsp;Placas&emsp;&emsp;&emsp;&emsp;Marca&emsp;&emsp;Modelo&emsp;&emsp;NumSerie
+			       &emsp;&emsp;Fecha&emsp;&emsp;&emsp;&emsp;Ficha&emsp;&emsp;&emsp;&emsp;Actividad&emsp;&emsp;Vehiculo&emsp;&emsp;Destinos&emsp;&emsp;&emsp;&emsp;Material&emsp;&emsp;Combustible&emsp;&emsp;Kilometraje&emsp;&emsp;&emsp;&emsp;Hora de Salida
 			       </h6>
-			      <ul id="listaVehiculo"></ul>
+			      <ul id="listaPases"></ul>
 			  </div>
 			
 			 <!--

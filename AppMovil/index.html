@@ -22,8 +22,9 @@
 <meta name="theme-color" content="#ffffff">
 -->
 <script src="js/indexPersonal.js"></script>
-<script src="js/Sitio.js"></script>
-<script src="js/Vehiculo.js"></script>
+<script src="js/indexSitio.js"></script>
+<script src="js/indexVehiculo.js"></script>
+<script src="js/indexPases.js"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -140,14 +141,35 @@
 						<div id="listaVehiculosHolder">
 					       <h3>Lista de vehículos</h3>
 					       <h6>
-					       &emsp;&emsp;&emsp;# Econ.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Placas&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Modelo&emsp;&emsp;Marca
+					       &emsp;&emsp;NumEcon&emsp;&emsp;Placas&emsp;&emsp;&emsp;&emsp;Marca&emsp;&emsp;Modelo&emsp;&emsp;NumSerie
 					       </h6>
-					    <ul id="listaVehiculos"></ul>
+					    <ul id="listaVehiculo"></ul>
 					</div>
 
 
 				</div>
 				<!--Fin de 3er Colapsable-->
+
+				<!--Inicio de 4ta Colapsable Pases.-->
+			  <div data-role="collapsible" data-theme="a" data-content-theme="e" data-collapsed="false" style="background-color: #FFFFFF">
+			  	    <meta charset="utf-8">
+				  	  <p style="text-align: center;"><h3><center>Pases</center></center></h3></p>
+
+						<p align="justify">Los <strong>Pases de salida</strong> son creados para justificar la salida de personal
+						interno de PEMEX&copy; a trabajo de campo</p>
+
+						<div id="listaPasesHolder">
+					       <h3>Lista de pases</h3>
+					       <h6>
+					       &emsp;&emsp;Fecha&emsp;&emsp;Ficha&emsp;&emsp;&emsp;&emsp;Actividad&emsp;&emsp;Vehiculo&emsp;&emsp;Destinos&emsp;&emsp;&emsp;&emsp;Material&emsp;&emsp;Combustible&emsp;&emsp;Kilometraje&emsp;&emsp;&emsp;&emsp;Hora de Salida
+					       </h6>
+					    <ul id="listaPases"></ul>
+					</div>
+
+
+				</div>
+				<!--Fin de 4to Colapsable-->
+
 			</div>
 
 			<!--Footer de page principal-->
