@@ -15,10 +15,11 @@ if (window.openDatabase) {
 //function to output the list of personal in the database
 
 function actualizarPersonal(transaction, results) {
+    /*
     //initialise the listitems variable
     var listitems = "";
     //get the pesonal list holder ul
-    var listholder = document.getElementById("lista_Personal1");
+    var listholder = document.getElementById("listaPersonal1");
 
     //clear personal list ul
     listholder.innerHTML = "";
@@ -30,11 +31,39 @@ function actualizarPersonal(transaction, results) {
         var row = results.rows.item(i);
 
 
-        listholder.innerHTML += "<li>" + row.ficha + " - " + row.Nombre + " - " + row.Categoria + " - " + row.Nivel 
-        + "</li>";
+        listholder.innerHTML += "<tr><th>" + row.ficha + "</th><td>" + row.Nombre + "</td><td>" + row.Categoria + "</td><td>" + row.Nivel 
+        + "</td></tr>";
 //        + " (<a href='javascript:void(0);' onclick='eliminarPersonal(" + row.id + ");'>Eliminar</a>)</li>";
     }
-
+*/
+  // Obtener la referencia del elemento body
+  var body = document.getElementsByTagName("body")[0];
+ 
+  // Crea un elemento <table> y un elemento <tbody>
+  var tabla   = document.getElementsByTagName("table")[0];
+  var tblBody = document.getElementsByTagName("tbody")[0];
+ 
+  // Crea las celdas
+  for (var i = 0; i < results.rows.length; i++) {
+    // Crea las hileras de la tabla
+    //var row = results.rows.item(i);
+    var hilera = document.createElement("tr");
+ 
+    for (var j = 0; j < results.rows.; j++) {
+      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
+      // texto sea el contenido de <td>, ubica el elemento <td> al final
+      // de la hilera de la tabla
+        var row = results.rows.item(j);
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("celda en la hilera "+i+" "+row.ficha+", columna "+j);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
+ 
+    // agrega la hilera al final de la tabla (al final del elemento tblbody)
+    tblBody.appendChild(hilera);
+  }
+ 
 }
 
 //function to get the list of personal from the database

@@ -18,7 +18,7 @@ function actualizarPersonal(transaction, results) {
     //initialise the listitems variable
     var listitems = "";
     //get the pesonal list holder ul
-    var listholder = document.getElementById("lista_Personal1");
+    var listholder = document.getElementById("listaPersonal1");
 
     //clear personal list ul
     listholder.innerHTML = "";
@@ -30,8 +30,8 @@ function actualizarPersonal(transaction, results) {
         var row = results.rows.item(i);
 
 
-        listholder.innerHTML += "<li>" + row.ficha + " - " + row.Nombre + " - " + row.Categoria + " - " + row.Nivel 
-        + "</li>";
+        listholder.innerHTML += "<tr><th>" + row.ficha + "</th><td>" + row.Nombre + "</td><td>" + row.Categoria + "</td><td>" + row.Nivel 
+        + "</td></tr>";
 //        + " (<a href='javascript:void(0);' onclick='eliminarPersonal(" + row.id + ");'>Eliminar</a>)</li>";
     }
 
