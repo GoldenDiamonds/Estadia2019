@@ -14,11 +14,11 @@ if (window.openDatabase) {
 
 //function to output the list of personal in the database
 
-function actualizarPersonal(transaction, results) {
+function actualizarPersonal1(transaction, results) {
     //initialise the listitems variable
     var listitems = "";
     //get the pesonal list holder ul
-    var listholder = document.getElementById("listaPersonal");
+    var listholder = document.getElementById("listaPersonal1");
 
     //clear personal list ul
     listholder.innerHTML = "";
@@ -39,12 +39,12 @@ function actualizarPersonal(transaction, results) {
 
 //function to get the list of personal from the database
 
-function salidaPersonal() {
+function salidaPersonal1() {
     //check to ensure the mydb object has been created
     if (mydb) {
         //Get all the personal from the database with a select statement, set outputPersonalList as the callback function for the executeSql command
         mydb.transaction(function (t) {
-            t.executeSql("SELECT * FROM personal", [], actualizarPersonal);
+            t.executeSql("SELECT * FROM personal", [], actualizarPersonal1);
         });
     } else {
        // alert("¡Tú navegador web/browser no soporta WebSQL!");
@@ -53,7 +53,7 @@ function salidaPersonal() {
 
 //function to add the car to the database
 
-function addPersonal() {
+function addPersonal1() {
     //check to ensure the mydb object has been created
     if (mydb) {
         //get the values of the make and model text inputs
@@ -66,7 +66,7 @@ function addPersonal() {
             //Insert the user entered details into the cars table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function (t) {
                 t.executeSql("INSERT INTO personal (ficha, Nombre, Categoria, Nivel) VALUES (?, ?, ?, ?)", [ficha, nombre, categoria, nivel]);
-                salidaPersonal();
+                salidaPersonal1();
             });
         } else {
             alert("Por favor, rellena todos los campos");
@@ -78,7 +78,7 @@ function addPersonal() {
 
 
 //function to remove a personal from the database, passed the row id as it's only parameter
-function eliminarPersonal(id) {
+function eliminarPersonal1(id) {
     //check to ensure the mydb object has been created
     if (mydb) {
         //Get all the personal from the database with a select statement, set outputPersonalList as the callback function for the executeSql command
@@ -90,4 +90,4 @@ function eliminarPersonal(id) {
     }
 }
 
-salidaPersonal();
+salidaPersonal1();

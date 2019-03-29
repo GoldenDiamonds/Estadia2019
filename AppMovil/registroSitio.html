@@ -9,7 +9,7 @@
 <script src="js/jquery.js"></script>
 <!--<script src="js/index.js"></script>-->
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/Sitio.js"></script>
+<script src="js/SitiosFilter.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -74,7 +74,7 @@
 	        </div>
 			
 	        <button type="button" id="addSitio" onclick="addSitio();">Añadir</button>
-	        
+	        <!--
 			  <div id="listaSitiosHolder">
 			       <h3>Lista de sitios</h3>
 			       <h6>
@@ -82,6 +82,23 @@
 			       </h6>
 			      <ul id="listaSitios"></ul>
 			  </div>
+			-->
+
+			<form>
+			    <input id="filterTable-input" data-type="search">
+			</form>
+			<table data-role="table" id="movie-table" data-filter="true" data-input="#filterTable-input" data-mode="columntoggle"  class="ui-responsive">
+			    <thead>
+			        <tr>
+			            <th data-priority="1">Sitio</th>
+			        </tr>
+			        </thead>
+			        <tbody id="listaSitiosTable">
+
+			        </tbody>
+			    </table>
+			   
+	      </form>
 			
 	    </div>
 	    <div data-role="footer" data-theme="b" data-position="fixed">

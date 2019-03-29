@@ -18,14 +18,14 @@ function actualizarPersonal(transaction, results) {
     //initialise the listitems variable
     var listitems = "";
     //get the pesonal list holder ul
-    var listholder = document.getElementById("listaPersonal");
+    var listholder = document.getElementById("listaPersonal1");
 
     //clear personal list ul
     listholder.innerHTML = "";
 
-
+    var i;
     //Iterate through the results
-    for (var i = 0; i < results.rows.length; i++) {
+    for (i = 0; i < results.rows.length; i++) {
         //Get the current row
         var row = results.rows.item(i);
 

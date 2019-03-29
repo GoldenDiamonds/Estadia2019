@@ -120,35 +120,33 @@
 	    	<ul id="listaPases"></ul>
 	    </div>
 	    -->
-			
-			<form>
-			    <input id="filterTable-input" data-type="search">
-			</form>
-			<table data-role="table" id="movie-table" data-filter="true" data-input="#filterTable-input" class="ui-responsive">
-			    <thead>
-			        <tr>
-			            <th data-priority="1">Fecha</th>
-			            <th data-priority="persist">Ficha</th>
-			            <th data-priority="2">Actividad</th>
-			            <th data-priority="3">Vehículo</th>
-						<th data-priority="4">Destino</th>
-						<th data-priority="5">Material</th>
-						<th data-priority="6">Combustible</th>
-						<th data-priority="7">Kilometraje</th>
-						<th data-priority="8">HoraSalida</th>
-			        </tr>
-			        </thead>
-			        <tbody id="listaPasesHolder">
-				<!--
-			            <tr>
-			                <td id="lista_Usuarios"></td>
-			            </tr>
-		-->
-			        </tbody>
-			    </table>
-			   
-	      </form>
-	  
+	    
+    <form>
+    	    <input id="filterTable-input" data-type="search">
+    </form>
+    <table data-role="table" id="movie-table" data-filter="true" data-input="#filterTable-input" data-mode="columntoggle" class="ui-responsive">
+    	    <thead>
+    		        <tr>
+    			            <th data-priority="1">Fecha</th>
+    			            <th>Ficha</th>
+    			            <th>Actividad</th>
+    			            <th data-priority="1">Coche</th>
+    			<th data-priority="2">Destino</th>
+    			<th data-priority="2">Material</th>
+    			<th data-priority="2">Combust.</th>
+    			<th data-priority="3">Km.</th>
+    			<th data-priority="3">HoraSalida</th>
+    		        </tr>
+    	        </thead>
+    	        <tbody id="listaPasesHolder">
+			<!--
+		            <tr>
+		                <td id="lista_Usuarios"></td>
+		            </tr>
+	-->
+        </tbody>
+    </table>
+
 	</div>
 	<div data-role="footer" data-theme="b" data-position="fixed">
 		<center>

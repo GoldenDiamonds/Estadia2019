@@ -10,7 +10,7 @@
 	<!--<script src="js/index.js"></script>-->
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<!--<script src="js/Personal.js"></script>-->
-	<script src="js/PersonalFilterv0.js"></script>
+	<script src="js/PersonalFilter.js"></script>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -103,8 +103,8 @@
 
 	<form>
 		    <input id="filterTable-input" data-type="search">
-	</form>
-	<table data-role="table" id="movie-table" data-filter="true" data-input="#filterTable-input" class="ui-responsive">
+	
+	<table data-role="table" id="movie-table" data-filter="true" data-input="#filterTable-input" data-mode="columntoggle" class="ui-responsive">
 		    <thead>
 			        <tr>
 				            <th data-priority="1">Ficha</th>
