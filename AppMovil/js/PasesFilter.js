@@ -40,7 +40,20 @@ function actualizarPases(transaction, results) {
     }
 
 }
-
+/*
+function combos(transaction, results)   {
+    var ficha = document.getElementById("ficha");
+    for (j = 0; j < results.rows.length; j++) {
+        //Get the current row
+        var row = results.rows.item(j);
+        fecha.innerHTML += "<option>" + row.ficha + "</option>";
+    }
+}
+window.onload = function()
+{
+    combos();
+}
+*/
 //function to get the list of Pases from the database
 
 function salidaPases() {

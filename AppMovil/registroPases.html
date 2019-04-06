@@ -23,7 +23,7 @@
 
 
 </head>
-<body>
+<body">
 
 	<!--Inicio de page principal-->
 	<div data-role ="page" id="registro" data-add-back-btn= true>
@@ -72,10 +72,25 @@
 			<label for="fecha"><strong>Fecha</strong></label>
 			<input type="text" name="fecha" id="fecha" required/>
 		</div>
-		<div data-role="fieldcontain">
-			<label for="ficha"><strong>Ficha</strong></label>
-			<input type="text" name="ficha" id="ficha" required/>
-		</div>
+		<script type="text/javascript">
+			//Test for browser compatibility
+			if (window.openDatabase) {
+			    //Create the database the parameters are 1. the database name 2.version number 3. a description 4. the size of the database (in bytes) 1024 x 1024 = 1MB
+			    var mydb = openDatabase("dctipn", "1.0", "Base de datos de DCTIPN", 3*1024*1024);
+			} else {
+			    alert("¡Tu navegador web/browser no soporta WebSQL!");
+			}
+			function combos(transaction, results)   {
+		    var ficha = document.getElementById("ficha");
+		    for (j = 0; j < results.rows.length; j++) {
+		        //Get the current row
+		        var row = results.rows.item(j);
+		        ficha.innerHTML += "<option>" + row.ficha + "</option>";
+		    }
+		}
+		</script>
+		<select id="ficha">	
+		</select>
 		<div data-role="fieldcontain">
 			<label for="actividad"><strong>Actividad</strong></label>
 			<input type="text" name="actividad" id="actividad" required/>
